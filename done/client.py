@@ -37,6 +37,7 @@ if choice == "1":
             with open(filename, 'rb') as f:
                 file_data = f.read()
             result = proxy.upload(filename, xmlrpc.client.Binary(file_data))
+            print("Send file successful")
         except Exception as e:
             print("Error uploading file:", e)
 
